@@ -4,7 +4,8 @@
     <input [(ngModel)]="fullLink" name="fullLink" required type="text" class="form-control link-input" id="link" placeholder="Enter full link here">
     <button type="submit" (click)="createShortLink()" class="btn btn-primary">Shorten</button>
     <div *ngIf="link" class="link-output">
-        <a href="{{link}}">{{ fullShortLink}}</a>
+        <a href="{{link}}" class="badge badge-light">{{ fullShortLink}}</a>
+        <span class="badge badge-dark"> {{ hits }}</span>
     </div>
   </form>
 </div>
