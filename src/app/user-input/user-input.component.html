@@ -1,0 +1,12 @@
+  <div class="center">
+  <form class="form-inline" >
+    <label class="sr-only" for="link">Full link</label>
+    <input [(ngModel)]="fullLink" name="fullLink" required type="text" class="form-control link-input" id="link" placeholder="Enter full link here">
+    <button type="submit" (click)="createShortLink()" class="btn btn-primary">Shorten</button>
+    <div *ngIf="link" class="link-output">
+        <a href="{{link}}">{{ fullShortLink}}</a>
+    </div>
+  </form>
+</div>
+
+

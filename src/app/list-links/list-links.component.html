@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Full link</th>
+      <th scope="col">Total hits</th>
+      <th scope="col">Creation date</th>
+      <th scope="col">Last hit on</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let link of links; index as i">
+      <th scope="row">{{i+1}}</th>
+      <td>{{link.full_link}}</td>
+      <td>{{link.hits}}</td>
+      <td>{{link.created_at | date: "HH:mm d/MM/yyyy"}}</td>
+      <td>{{link.updated_at | date: "HH:mm d/MM/yyyy"}}</td>
+    </tr>
+  </tbody>
+</table>
